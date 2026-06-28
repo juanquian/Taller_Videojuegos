@@ -4,110 +4,76 @@
 
 **San José: El Archivo Perdido** es un videojuego 2D desarrollado en **PICO-8** utilizando **Lua**.
 
-El juego trata sobre un estudiante de informática que, a pocas horas de defender su proyecto final, pierde el pendrive donde tenía guardado todo su trabajo. A partir de ese momento, debe recorrer distintos escenarios inspirados en San José de Mayo para intentar recuperarlo antes de que sea demasiado tarde.
+El juego trata sobre un estudiante de informática que, a pocas horas de defender su proyecto final, pierde el pendrive donde tenía guardado su trabajo. A partir de ese momento, debe recorrer distintos escenarios inspirados en San José de Mayo para intentar recuperarlo antes de que se termine el tiempo.
 
-El jugador deberá avanzar por diferentes zonas, esquivar obstáculos, enfrentarse a enemigos y derrotar bosses que le darán pistas sobre el paradero del pendrive.
+Durante el recorrido, el jugador debe avanzar por diferentes zonas, enfrentar enemigos, hablar con personajes importantes y derrotar jefes que le dan pistas sobre el paradero del pendrive.
 
 ## Objetivo principal
 
-El objetivo del juego es recuperar el pendrive antes de que se termine el tiempo disponible.
+El objetivo del juego es **recuperar el pendrive antes de la defensa final**.
 
-### Condición de victoria
+Para lograrlo, el jugador debe recorrer los escenarios, sobrevivir a los enemigos, derrotar al placero y finalmente vencer al jefe del gimnasio, quien tiene el pendrive.
 
-- Derrotar al boss final.
-- Recuperar el pendrive perdido.
+## Historia
 
-### Condiciones de derrota
+El protagonista descubre que perdió su pendrive con el archivo del proyecto. Al recordar su recorrido, sospecha que pudo haberlo perdido en la plaza.
 
-- Perder toda la vida.
-- Que se termine el tiempo límite.
+Primero sale de su cuarto y pasa por la calle principal, donde se encuentra con estudiantes hostiles. Luego llega a la plaza y habla con el placero, quien revela que el pendrive terminó en manos del jefe del gimnasio.
+
+Finalmente, el jugador debe llegar al gimnasio, enfrentar al jefe final y recuperar el pendrive para poder llegar a tiempo a la defensa.
+
+## Condición de victoria
+
+El jugador gana si:
+
+- Llega al gimnasio.
+- Derrota al jefe final.
+- Recupera el pendrive.
+
+Al ganar, aparece una pantalla de victoria indicando que el pendrive fue recuperado y que la defensa sigue viva.
+
+## Condiciones de derrota
+
+El jugador pierde si:
+
+- Se queda sin vidas.
+- Se termina el tiempo límite.
+
+El juego cuenta con una pantalla de derrota que indica el motivo por el cual se perdió la partida.
+
+## Controles
+
+- **Flechas:** mover al personaje.
+- **X:** golpear o disparar.
+- **X + abajo:** defenderse.
+- **Flecha arriba:** saltar durante el combate contra el jefe del gimnasio.
+- **Z / X:** avanzar diálogos, comenzar o reiniciar.
 
 ## Mecánicas principales
 
-El juego utiliza mecánicas simples, pensadas para adaptarse a las limitaciones de PICO-8 y mantener una jugabilidad clara.
+El juego utiliza mecánicas simples adaptadas a las limitaciones de PICO-8.
 
 El jugador puede:
 
-- Moverse lateralmente.
-- Saltar.
-- Atacar enemigos.
-- Interactuar con elementos del escenario.
-- Cambiar de mapa al llegar a determinadas zonas.
+- Moverse por los escenarios.
+- Atacar enemigos cercanos.
+- Disparar durante los combates contra jefes.
+- Defenderse usando X + abajo.
+- Saltar en el combate final para esquivar la embestida del jefe del gimnasio.
+- Cambiar de mapa al avanzar por el recorrido.
+- Perder vida al recibir daño.
+- Ganar o perder según el tiempo y la vida disponible.
 
 ## Sistema de mapas
 
-El juego está dividido en varios escenarios. Cada mapa representa una parte distinta del recorrido del protagonista.
+El juego está dividido en cuatro escenarios principales:
 
-### Mapas implementados o planificados
+- **Cuarto del estudiante:** punto inicial de la historia.
+- **Calle principal:** zona de avance y primer combate contra estudiantes.
+- **Plaza:** lugar donde se perdió originalmente el pendrive.
+- **Gimnasio:** escenario final donde se encuentra el jefe del gym.
 
-- Cuarto del estudiante.
-- Calle o recorrido principal.
-- Plaza Artigas.
-- Gimnasio.
-- Kiosco / zona final.
+El recorrido del juego es lineal:
 
-El primer mapa funciona como una zona inicial más estática, mientras que los mapas siguientes permiten mayor desplazamiento  .  
-Al llegar al final de ciertos mapas, el jugador pasa al siguiente escenario.
-
-## Sistema de combate
-
-El jugador cuenta con ataques básicos utilizando objetos cotidianos.
-
-### Ataques del jugador
-
-- **Golpe de puño:** ataque corto para enemigos cercanos.
-- **Golpe con mochila:** ataque con un poco más de alcance.
-- **Mate:** habilidad especial que puede mejorar temporalmente el rendimiento del jugador.
-
-## Enemigos
-
-Durante el recorrido aparecen enemigos básicos que dificultan el avance del jugador.
-
-### Tipos de enemigos
-
-- Estudiante enfurecido.
-- NPC hostil callejero.
-- Empleado enojado.
-
-Cada enemigo tendrá comportamientos simples, como moverse por el escenario y atacar cuando el jugador se acerque.
-
-## Bosses
-
-Los bosses funcionan como puntos importantes de progreso dentro del juego.  
-Al derrotar a cada boss, el jugador obtiene una nueva pista sobre dónde puede estar el pendrive.
-
-### Bosses planificados
-
-- Boss 1: Placero.
-- Boss 2: Empleado loco.
-- Boss final: Vendedor enfurecido.
-
-Cada boss tendrá más vida que los enemigos comunes y una dificultad mayor.
-
-## Estilo visual
-
-El juego utiliza un estilo pixel art simple, respetando la paleta de colores y las limitaciones propias de PICO-8.
-
-Se busca representar una versión simplificada y humorística de San José de Mayo, usando escenarios urbanos, calles, plazas y lugares cotidianos.
-
-## Motor y lenguaje
-
-- **Motor:** PICO-8
-- **Lenguaje:** Lua
-- **Estilo:** Juego 2D de acción con vista lateral
-
- 
-
-## Estado actual del desarrollo
-
-Actualmente se está trabajando en:
-
-- Movimiento del personaje principal.
-- Definición de límites de movimiento por mapa.
-- Cambio entre escenarios.
-- Diseño de mapas utilizando tiles.
-- Organización del código en funciones. 
-
-## Integrantes
-
-- Juan Aparicio Quian 
+```txt
+Cuarto → Calle → Plaza → Gimnasio → Final
